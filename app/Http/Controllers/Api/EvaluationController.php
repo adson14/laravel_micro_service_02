@@ -52,7 +52,7 @@ class EvaluationController extends Controller
 
         $evaluation = $this->repository->create($request->validated());
 
-        EvaluationCreated::dispatch($company->data->email)->onQueue('queue_email');
+        //EvaluationCreated::dispatch($company->data->email)->onQueue('queue_email');
 
         return new EvaluationResource($evaluation);
     }
